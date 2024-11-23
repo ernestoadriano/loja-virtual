@@ -21,7 +21,7 @@ public class PessoaClienteService {
         Pessoa pessoa = new PessoaClienteRequestDTO().converter(pessoaClienteRequestDTO);
         pessoa.setDataCriacao(new Date());
         Pessoa objectoNovo = pessoaRepository.saveAndFlush(pessoa);
-        permissaoPessoaService.vincularPessoaPermissaoCliente(pessoa);
+        permissaoPessoaService.vincularPessoaPermissaoCliente(objectoNovo);
         return objectoNovo;
     }
 }

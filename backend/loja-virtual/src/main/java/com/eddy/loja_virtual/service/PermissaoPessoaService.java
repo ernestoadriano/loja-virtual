@@ -22,10 +22,10 @@ public class PermissaoPessoaService {
 
     public void vincularPessoaPermissaoCliente(Pessoa pessoa) {
         List<Permissao> permissaoList = permissaoRepository.findByNome("cliente");
-        if (permissaoList.size() > 0) {
+        if (!permissaoList.isEmpty()) {
             PermissaoPessoa permissaoPessoa = new PermissaoPessoa();
             permissaoPessoa.setPessoa(pessoa);
-            permissaoPessoa.setPermissao(permissaoList.get(0));
+            permissaoPessoa.setPermissao(permissaoList.getFirst());
             permissaoPessoa.setDataCriacao(new Date());
             permissaoPessoaRepository.saveAndFlush(permissaoPessoa);
         }
