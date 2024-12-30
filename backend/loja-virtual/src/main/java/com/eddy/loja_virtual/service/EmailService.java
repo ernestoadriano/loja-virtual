@@ -1,6 +1,6 @@
 package com.eddy.loja_virtual.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+/*import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -28,5 +28,6 @@ public class EmailService {
         } catch (Exception e) {
             return "Erro ao tentar enviar email";
         }
-    }*/
+    }
 }
+*/

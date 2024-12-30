@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/cliente")
 public class PessoaClienteController {
 
-    @Autowired
+  /*  @Autowired
     private PessoaClienteService pessoaClienteService;
 
     @PostMapping("/")
     public Pessoa insert(@RequestBody PessoaClienteRequestDTO pessoaClienteRequestDTO) {
         Pessoa pessoa = new PessoaClienteRequestDTO().converter(pessoaClienteRequestDTO);
         return pessoaClienteService.registar(pessoaClienteRequestDTO);
-    }
+    }*/
 }

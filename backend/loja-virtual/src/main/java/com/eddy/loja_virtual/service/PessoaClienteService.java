@@ -17,16 +17,16 @@ public class PessoaClienteService {
     @Autowired
     private PermissaoPessoaService permissaoPessoaService;
 
-    @Autowired
-    private EmailService emailService;
+    /*@Autowired
+    private EmailService emailService;*/
 
-    public Pessoa registar(PessoaClienteRequestDTO pessoaClienteRequestDTO) {
+    /*public Pessoa registar(PessoaClienteRequestDTO pessoaClienteRequestDTO) {
         Pessoa pessoa = new PessoaClienteRequestDTO().converter(pessoaClienteRequestDTO);
         pessoa.setDataCriacao(new Date());
         Pessoa objectoNovo = pessoaRepository.saveAndFlush(pessoa);
         permissaoPessoaService.vincularPessoaPermissaoCliente(objectoNovo);
-       /* emailService.sendEmailText(objectoNovo.getEmail(), "Cadastro", "O registo na loja foi realizado " +
-                "com sucesso. Em breve você receberá a senha de acesso por e-mail!");*/
+       emailService.sendEmailText(objectoNovo.getEmail(), "Cadastro", "O registo na loja foi realizado " +
+                "com sucesso. Em breve você receberá a senha de acesso por e-mail!");
         return objectoNovo;
-    }
+    }*/
 }
